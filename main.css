@@ -69,30 +69,58 @@ h1{
     font-size: 2em;
     color: aliceblue;
 }
+
+/* hero section animation text */
 h3{
     color: rgb(0, 255, 0);
     font-weight:20; 
     text-align: center;
     font-size: 8em;
-    animation: weightChange 7s infinite;
 }
 
 
 .l-hero {
-    animation-delay: 1s; /* Adjusted delay to stagger properly */
+    animation: weight-change-hero 7s infinite;
+    animation-delay: 1s; /* Adjust delay to stagger properly */
 }
 
 .a-hero{
-    animation-delay: 2s; /* Adjusted delay to stagger properly */
+    animation: weight-change-hero 6s infinite;
 }
 .b-hero{
+    animation: weight-change-hero 5s infinite;
     animation-delay: 3s; /* Adjusted delay to stagger properly */
 }
 
+/* Add other three classes here */
 
-.pattern-background{
+@keyframes weight-change-hero {
+    0%{
+        font-variation-settings: 
+        'SIZE' 75, 
+        'OVAL' 0,
+        'BEVL' 10,
+        'SPRK' 50; }
+           50%{
+        font-variation-settings: 
+        'SIZE' 65, 
+        'OVAL' 40, 
+        'BEVL' 100,
+        'SPRK' 200;
+}
+            80%{
+    font-variation-settings: 
+        'SIZE' 85, 
+        'OVAL' 800, 
+        'BEVL' 800, 
+        'SPRK' 1000;
+            }
+        }
+        
+.pattern-background {
     font-size: 40em;
     animation: weightChange 7s infinite;
+    line-height: 300px;
 }
 
 @keyframes weightChange {
